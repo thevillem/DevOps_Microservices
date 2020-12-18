@@ -14,26 +14,25 @@ setup::
 	source $(current_dir)/.devops/bin/activate
 
 .PHONY : install
-install:: setup
+install::
 	# This should be run from inside a virtualenv
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
 .PHONY : test
-test:: setup
+test::
 	# Additional, optional, tests could go here
 	#python -m pytest -vv --cov=myrepolib tests/*.py
 	#python -m pytest --nbval notebook.ipynb
 
 
 .PHONY : lint
-lint:: install 
+lint::
 	# See local hadolint install instructions:   https://github.com/hadolint/hadolint
 	# This is linter for Dockerfiles
 	hadolint Dockerfile
 	# This is a linter for Python source code linter: https://www.pylint.org/
 	# This should be run from inside a virtualenv
-	source $(current_dir)/.devops/bin/activate
 	pip install pylint
 	pylint --disable=R,C,W1203 app.py
 
