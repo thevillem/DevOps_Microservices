@@ -15,13 +15,11 @@ def scale(payload):
     
     LOG.info(f"Scaling Payload: \n{payload}")
     scaler = StandardScaler().fit(payload.astype(float))
-    scaled_adhoc_predict = scaler.transform(payload.astype(float))
-    return scaled_adhoc_predict
+    return scaler.transform(payload.astype(float))
 
 @app.route("/")
 def home():
-    html = "<h3>Sklearn Prediction Home</h3>"
-    return html
+    return "<h3>Sklearn Prediction Home</h3>"
 
 @app.route("/predict", methods=['POST'])
 def predict():
