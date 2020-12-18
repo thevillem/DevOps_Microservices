@@ -12,4 +12,4 @@ docker images
 
 # Step 3: 
 # Run flask app
-docker run -it -p 8080:80 volto/housing_prediction:latest
+docker run -it -p 8080:80 volto/housing_prediction:latest > output_txt_files/docker_out.txt
