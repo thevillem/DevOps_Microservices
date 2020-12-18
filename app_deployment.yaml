@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: house-predicitons
+  labels:
+    app: house
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: house
+  template:
+    metadata:
+      labels:
+        app: house
+    spec:
+      containers:
+      - name: house
+        image: docker.io/volto/housing_prediction:latest
+        ports:
+        - containerPort: 80
