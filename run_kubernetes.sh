@@ -10,10 +10,14 @@ export dockerpath=volto/housing_prediction:latest
 # Run the Docker Hub container with kubernetes
 kubectl apply -f app_deployment.yaml
 
+while [[ $(kubectl get pods -l app=housing-predicitons -o 'jsonpath={..status.conditions[?(@.type=="Ready")].status}') != "True" ]]; do echo "waiting for pod" && sleep 1; done
+
 # Step 3:
 # List kubernetes pods
 kubectl get pods
 
 # Step 4:
 # Forward the container port to a host
-kubectl port-forward deployment/housing-predicitons 8080:80 &
+port="kubectl port-forward deployment/housing-predicitons 8080:80"
+
+$port &
