@@ -35,8 +35,4 @@ You can find a detailed [project rubric, here](https://review.udacity.com/#!/rub
 3. Run in Kubernetes:  `./run_kubernetes.sh`
 
 ### Kubernetes Steps
-
-* Setup and Configure Docker locally
-* Setup and Configure Kubernetes locally
-* Create Flask app in Container
-* Run via kubectl
+To delete the deployment when you're finished, you can run the following; `kubectl delete -f app_deployment.yaml`
