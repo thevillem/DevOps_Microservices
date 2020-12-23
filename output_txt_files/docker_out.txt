@@ -6,20 +6,20 @@
  * Running on http://0.0.0.0:80/ (Press CTRL+C to quit)
  * Restarting with stat
  * Debugger is active!
- * Debugger PIN: 370-233-121
-[2020-12-18 21:28:29,227] INFO in app: JSON payload: 
+ * Debugger PIN: 215-934-719
+[2020-12-22 21:56:18,535] INFO in app: JSON payload: 
 {'CHAS': {'0': 0}, 'RM': {'0': 6.575}, 'TAX': {'0': 296.0}, 'PTRATIO': {'0': 15.3}, 'B': {'0': 396.9}, 'LSTAT': {'0': 4.98}}
-[2020-12-18 21:28:29,251] INFO in app: Inference payload DataFrame: 
+[2020-12-22 21:56:18,545] INFO in app: Inference payload DataFrame: 
    CHAS  ...  LSTAT
 0     0  ...   4.98
 
 [1 rows x 6 columns]
-[2020-12-18 21:28:29,267] INFO in app: Scaling Payload: 
+[2020-12-22 21:56:18,553] INFO in app: Scaling Payload: 
    CHAS  ...  LSTAT
 0     0  ...   4.98
 
 [1 rows x 6 columns]
-[2020-12-18 21:28:29,271] INFO in app: Prediction Output: 
+[2020-12-22 21:56:18,555] INFO in app: Prediction Output: 
 [20.35373177134412]
-172.17.0.1 - - [18/Dec/2020 21:28:29] "POST /predict HTTP/1.1" 200 -
+172.17.0.1 - - [22/Dec/2020 21:56:18] "POST /predict HTTP/1.1" 200 -
 ^C
