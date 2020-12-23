@@ -1,3 +1,6 @@
+ NAME                  READY   STATUS    RESTARTS   AGE
+housing-predicitons   1/1     Running   0          3s
+
  * Serving Flask app "app" (lazy loading)
  * Environment: production
    WARNING: Do not use the development server in a production environment.
